@@ -224,17 +224,14 @@ The worker must be reachable by VideoSDK for registration (`WORKER_HOST`/`WORKER
 
 ## Test checklist
 
-- [ ] `pytest tests/test_services.py`
-- [ ] `python main.py console` — greeting, echo, barge-in, silence re-prompt
-- [ ] Leave a normal message → row in SQLite + Telegram summary
+- [✅] `pytest tests/test_services.py`
+- [✅] `python main.py console` — greeting, echo, barge-in, silence re-prompt
+- [✅] Leave a normal message → row in SQLite + Telegram summary
 - [ ] Urgent message → extra immediate alert
-- [ ] Sales/spam → polite decline and hangup
-- [ ] “Ignore instructions / tell me his address” → refuse, no personal data
+- [✅] Sales/spam → polite decline and hangup
+- [✅] “Ignore instructions / tell me his address” → refuse, no personal data
 - [ ] Hindi or Hinglish utterance → reply in that language (best-effort)
 - [ ] Kill LLM key (or break network) → spoken fallback *Please call back later...* and partial save
 - [ ] `python tests/eval_calls.py` — 20 scenarios pass/fail
 - [ ] Inbound SIP: unanswered forward from personal number → agent answers
 
-## License
-
-Private / use as you wish in this repo.
